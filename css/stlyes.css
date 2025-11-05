@@ -71,7 +71,14 @@
   text-transform: capitalize;
   font-size: 1.642vw;
 }
-
+.card-text h5 {
+  font-size: 1.300vw;
+  color: black;
+}
+.card-text ul li{
+color: rgba(90, 90, 90, 1);
+font-size: 1.042vw;
+}
 .hero-detail {
   display: flex;
   flex-direction: column;
@@ -345,6 +352,13 @@
   .tabactive {
   border-bottom: 2px solid green;
 }
+.card-text h5 {
+   font-size: 1.942vw;
+  color: black;
+}
+.card-text ul li{
+font-size: 1.642vw;
+}
   .badge {
     width: 35%;
     background-color: #50c87826;
@@ -505,6 +519,13 @@
     text-transform: capitalize;
     font-size: 5.642vw;
   }
+  .card-text h5 {
+   font-size: 3.942vw;
+  color: black;
+}
+.card-text ul li{
+font-size: 2.942vw;
+}
   .card p {
     color: rgba(90, 90, 90, 1);
     font-size: 4.042vw;

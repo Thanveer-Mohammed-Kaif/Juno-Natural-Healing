@@ -33,7 +33,9 @@ function renderProducts(country) {
         </div>
         <div class="card-text">
           <h4>${item.name}</h4>
-          <p class="mb-0">${item.Description}</p>
+          <p class="mb-3">${item.Description}</p>
+          <h5 class="heading">${item.heading}</h5>
+          <p class="Oppurtunity mb-3 fw-bold">${item.oppurtunity}</p>
           <div class="card-btn d-flex justify-content-between mt-5">
             <h4>${item.weight}</h4>
             <button>View Details</button>
