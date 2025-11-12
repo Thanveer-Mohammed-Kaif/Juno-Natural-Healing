@@ -1,7 +1,7 @@
 
 (function() {
   emailjs.init({
-    publicKey: "Tj8ch3-_L-pzXUVMM"
+    publicKey: "zqUTWt_2j5FWGLG69"
   });
 })();
 
@@ -55,7 +55,6 @@ function sendEmail(form) {
   emailjs
     .send(serviceID, templateID, params)
     .then((response) => {
-      console.log("SUCCESS!", response.status, response.text);
       alert("Your message has been sent to Juno Naturals Healing!");
       form.reset();
       form.classList.remove("was-validated");

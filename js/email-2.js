@@ -8,7 +8,13 @@ function sendEmailForm(event) {
   const activeForm = document.querySelector(".content.active");
   const prefix = activeForm.id === "consultation" ? "Consult" : "Course";
 
+    const formType = activeForm.id === "consultation"
+    ? "Consultation"
+    : "Course Enrollment";
+
+
   const formData = {
+    form_type: formType,
     fullName: document.getElementById(`fullName${prefix}`).value.trim(),
     dob: document.getElementById(`dob${prefix}`).value.trim(),
     gender: document.getElementById(`gender${prefix}`).value.trim(),
@@ -17,7 +23,7 @@ function sendEmailForm(event) {
     address: document.getElementById(`address${prefix}`).value.trim(),
     timezone: document.getElementById("timezone")?.value.trim() || "N/A",
     consultMode: document.getElementById("consultMode")?.value.trim() || "N/A",
-    concern: document.getElementById("concern")?.value.trim() || "N/A",
+    concern: document.getElementById("concernConsult")?.value.trim() || "N/A",
     medications: document.getElementById("medications")?.value.trim() || "N/A",
     practices: document.getElementById("practices")?.value.trim() || "N/A",
     courseDate: document.getElementById("CourseDates")?.value.trim() || "N/A",
@@ -113,7 +119,6 @@ formData.selectedServices = selectedServices.length > 0
     return;
   }
 
-  console.log("Validated Data:", formData);
 
   const serviceID = "service_z4ao0v8";
   const templateID = "template_99kwujm";
@@ -122,7 +127,6 @@ formData.selectedServices = selectedServices.length > 0
     .send(serviceID, templateID, formData)
     .then(() => {
       alert("Your details have been sent successfully!");
-      console.log("Form Data Sent:", formData);
 
       activeForm.querySelectorAll("input, select, textarea").forEach((el) => {
         if (el.type === "checkbox" || el.type === "radio") {
